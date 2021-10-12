@@ -12,7 +12,7 @@ def index():
     # plot ids for the html id tag
     ids = ['figure-{}'.format(i) for i, _ in enumerate(figures)]
 
-    # Convert the plotly figures to JSON for javascript in html template
+    # Convert the plotly figures to JSON for javascript in html template (method converts python object to json string)
     figuresJSON = json.dumps(figures, cls=plotly.utils.PlotlyJSONEncoder)
 
     return render_template('index.html',
